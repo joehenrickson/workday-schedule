@@ -9,3 +9,7 @@ Enter your tasks for the day and press the save button for local tasks to be sav
 Returning to the page, your task will remain in the local storage until you make changes for the new day or delete the task.  
 
 Deployed application:
+
+
+Github page:
+https://github.com/joehenrickson/workday-schedule
