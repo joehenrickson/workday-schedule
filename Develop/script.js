@@ -16,13 +16,13 @@ $(document).ready(function () {
 
      $(".time-block").each(function () {
         var blockTime = parseInt($(this).attr("id").split("hour")[1]);
-        console.log(blockTime, timeNow);
-        if (blockTime < timeNow) {
+        console.log(blockTime, currentTime);
+        if (blockTime < currentTime) {
             $(this).removeClass("future");
             $(this).removeClass("present");
             $(this).addClass("past");
         }
-        else if (blockTime === timeNow) {
+        else if (blockTime === currentTime) {
             $(this).removeClass("past");
             $(this).removeClass("future");
             $(this).addClass("present");
@@ -31,6 +31,19 @@ $(document).ready(function () {
             $(this).removeClass("present");
             $(this).removeClass("past");
             $(this).addClass("future");
-        }
-    })
+    }
+})
 
+// local storage saves
+
+$("#eightAM .description").val(localStorage.getItem("eightAM"));
+$("#nineAM .description").val(localStorage.getItem("nineAM"));
+$("#tenAM .description").val(localStorage.getItem("tenAM"));
+$("#elevenAM .description").val(localStorage.getItem("elevenAM"));
+$("#twelvePM .description").val(localStorage.getItem("twelvePM"));
+$("#onePM .description").val(localStorage.getItem("onePM"));
+$("#twoPM .description").val(localStorage.getItem("twoPM"));
+$("#threePM .description").val(localStorage.getItem("threePM"));
+$("#fourPM .description").val(localStorage.getItem("fourPM"));
+$("#fivePM .description").val(localStorage.getItem("fivePM"));
+})
