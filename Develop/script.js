@@ -11,3 +11,14 @@ $(document).ready(function () {
         // saving items via local storage
         localStorage.setItem(time, item);
     })
+
+     // time block function for past, future, and present items
+
+     $(".time-block").each(function () {
+        var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+        console.log(blockTime, timeNow);
+        if (blockTime < timeNow) {
+            $(this).removeClass("future");
+            $(this).removeClass("present");
+            $(this).addClass("past");
+        }
